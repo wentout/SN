@@ -1,0 +1,21 @@
+{
+	"description" : "Smart Notes Client",
+	"icons" : {
+		"128" : "i/icon128.png",
+		"16" : "i/icon16.png",
+		"48" : "i/icon48.png"
+	},
+	"manifest_version" : 2,
+	"name" : "SmartNotesCli",
+	"background" : {
+		// "scripts" : ["bg.js"],
+		"page" : "bg.html"
+	},
+	"browser_action" : {
+		"default_icon" : "i/icon48.png",
+		"popup" : "bg.html"
+	},
+	"content_security_policy": "default-src * 'unsafe-inline'; script-src 'self' 'unsafe-eval'; object-src 'self'",
+	"permissions" : ["tabs", "http://*/*", "https://*/*", "webRequest", "storage", "clipboardWrite", "activeTab"],
+	"version" : "0.1"
+}

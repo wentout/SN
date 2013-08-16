@@ -1,0 +1,62 @@
+<div class = "row-fluid">
+<div id = "page_container">
+	<div id = "tree_content" ng-hide = "treeIsHidden">&nbsp;</div>
+	<div id = "tree_content_resize" ng-hide = "treeIsHidden"></div>
+	<div id = "ctrl_content" class = "unselectable">
+		<button ng-hover ng-click = "add()" ng-disabled = "!canAdd()"><i class = "icon-leaf"></i></button>
+		<button ng-hover ng-click = "del()" ng-disabled = "!pageIsFocused()"><i class = "icon-trash"></i></button>
+		<button ng-hover ng-click = "rename()" ng-disabled = "!pageIsFocused()"><i class = "icon-pencil"></i></button>
+		<hr/>
+		<hr/>
+		<button ng-hover ng-click = "getMagnet()" ng-disabled = "!pageIsFocused()"><i class = "icon-magnet"></i></button>
+		<button ng-hover ng-click = "share()" ng-disabled = "!canShare()"><i class = "icon-share"></i></button>
+		<hr/>
+		<hr/>
+		<button ng-hover ng-click = "refresh()" ng-disabled = "!canRefresh()"><i class = "icon-refresh"></i></button>
+		<hr/>
+		<hr/>
+		<button ng-hover ng-click = "save()" ng-disabled = "!pageIsFocused()"><i class = "icon-check"></i></button>
+		<hr/>
+		<hr/>
+		<button ng-hover ng-click = "treeIsHidden = !treeIsHidden"><i  class = "{{ treeIsHidden ? 'icon-eye-open' : 'icon-eye-close' }}"></i></button>
+	</div>
+	<div id = "page_content">
+			<ul class = "nav nav-tabs">
+				<li class = "{{activeTab('page_head')}}" ng-click = "setActiveTab('page_head')">
+					<a href = "!#/notes:page_head" data-toggle = "tab">{{i18n.tabs.head}}</a>
+				</li>
+				<li class = "{{activeTab('page_settings')}}" ng-click = "setActiveTab('page_settings')">
+					<a href = "!#/notes:page_settings" data-toggle = "tab">{{i18n.tabs.settings}}</a>
+				</li>
+			</ul>
+			<div class="tab-content">
+				<div class = "tab-pane {{activeTab('page_head')}}" id = "page_head">
+<!-- 
+					<div class = "control-group">
+						<label class = "control-label" for = "title">{{i18n.title}}</label>
+						<input type = "text" id = "title" ng-model = "model.title" required>
+					</div>
+					<div class = "control-group">
+						<label class = "control-label" for = "header">{{i18n.header}}</label>
+						<textarea rows = "{{model.header.length > 0 ? 7 : 3}}" id = "header" ng-model = "model.header" required></textarea>
+					</div>
+ -->
+					<div class = "control-group">
+						<textarea rows = "23" ng-model = "model.page" required id = "editor"></textarea>
+						<!-- <textarea rows = "23" id = "editor"></textarea> -->
+					</div>
+				</div>
+<!-- 
+				<div class = "tab-pane" id = "page_html">
+						<textarea rows = "23" ng-model = "model.page" required></textarea>
+				</div>
+
+ -->				
+				<div class = "tab-pane {{activeTab('page_settings')}}" id = "page_settings">
+					... Nothing Here, Still ...
+				</div>
+			</div>
+
+	</div>
+</div>
+</div>

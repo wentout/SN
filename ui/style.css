@@ -1,0 +1,154 @@
+body {
+	background: #C0C0C0;
+	font-family: Tahoma;
+	overflow-y: scroll;
+}
+button, button.btn {
+	cursor: default;
+}
+
+/* ie focusing elements */
+input:focus, textarea:focus {
+	outline: none;
+}
+
+#container {
+	background: white;
+	padding: 50px 5px 0px 5px;
+	margin: 0px 5px 5px 5px;
+}
+
+#info  {
+	border: 1px solid black;
+	bottom: 0px;
+	z-index: 1000;
+}
+
+#page_container {
+	min-height: 350px;
+	min-width: 950px;
+	margin: 0px 10px 0px 10px;
+}
+#tree_content {
+	vertical-align: top;
+	min-width: 300px;
+	max-width: 50%;
+	border: 1px solid #C0C0C0;
+	margin: 0px 5px 0px 0px;
+	display: table-cell;
+	overflow: hidden;
+}
+#tree_content_resize {
+	display: table-cell;
+	min-width: 5px;
+	max-width: 5px;
+	width: 5px;
+	background: #D0D0D0;
+	cursor: w-resize;
+}
+ul.custom_tree_root li span.tree_control.folder{
+	cursor: default;
+}
+#ctrl_content  {
+	vertical-align: top;
+	display: table-cell;
+	width: 35px;
+}
+#ctrl_content  button {
+	line-height: 16px;
+	display: block;
+	margin: 3px 3px 0px 4px;
+	opacity: 0.55;
+}
+#ctrl_content  button.hover {
+	opacity: 1;
+}
+#ctrl_content  hr {
+	margin: 3px 0px 0px 9px;
+	display: block;
+	width: 20px;
+	line-height: 3px;
+	border-top-color: #C0C0C0;
+	border-bottom: 0px;
+}
+
+#page_content  {
+	border: 1px solid #C0C0C0;
+	padding: 17px 25px 9px 25px;
+	display: table-cell;
+	width: 100%;
+	min-width: 50%;
+}
+#page_content input[type="text"], #page_content textarea {
+	width: 97%;
+	min-width: 500px;
+}
+
+
+#FilesExplorerFrame {
+	width: 100%; 
+	min-height: 350px; 
+	border: 0px solid white;
+}
+
+#settings {
+	padding: 20px 30px 30px 70px;
+	display: block;
+}
+#settings > div {
+	border: 1px solid red;
+	display: table-row;
+}
+#settings > form {
+	display: table-cell;
+}
+#settings > div > #save {
+	vertical-align: top;
+	display: table-cell;
+	padding: 0px 0px 0px 50px;
+}
+#settings > div  > #save > button{
+	font-size: 1.4em;
+	padding: 20px 40px 20px 40px;
+}
+#settings > div > form > div > table td{
+	padding: 3px 7px 2px 0px;
+}
+#settings > div > form input {
+	margin-bottom: 0px;
+}
+#settings > div > form > div > label > span {
+	margin-left: 15px;
+	display: block;
+}
+#settings > div > form > div.control-group{
+	display: table;
+}
+#settings > div > form > div.control-group > input, #settings > div > form > div.control-group > label {
+	display: table-cell;
+	vertical-align: middle;
+}
+#settings > div > form > div.control-group > label {
+	padding-left: 15px;
+}
+#settings > div label.checkbox input[type="checkbox"] {
+	margin-left: -10px;
+}
+
+.navbar .nav>.active>a, .navbar .nav>.active>a:hover, .navbar .nav>.active>a:focus {
+	color: #555;
+	text-decoration: none;
+	background-color: #e5e5e5;
+	text-shadow: 0 0px 0 #fff;
+	-webkit-box-shadow: inset 0 0px 0px rgba(0,0,0,0);
+	-moz-box-shadow: inset 0 0px 0px rgba(0,0,0,0);
+	box-shadow: inset 0 0px 0px rgba(0,0,0,0);
+}
+
+.navbar .nav li>a:hover {
+	color: #333;
+	background-color: #f5f5f5;
+	/* -webkit-box-shadow: inset 0 0px 3px rgba(0,0,0,0.125); */
+	/* -moz-box-shadow: inset 0 0px 3px rgba(0,0,0,0.125); */
+	/* box-shadow: inset 0 0px 3px rgba(0,0,0,0.125); */
+}

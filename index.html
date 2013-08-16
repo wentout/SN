@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html xmlns:ng = "http://angularjs.org" id = "ng-app">
+<head ng-controller = "HeadCtrl">
+	
+	<meta http-equiv = "Content-Type" content = "text/html; charset=utf=8">
+	<title ng-bind-template = "{{title}}"> Smart Notes Project </title>
+	
+	<script language = "JavaScript" type = "text/javascript" charset = "utf-8" src = "./ui/scripts/jquery-2.0.3.js"></script>
+	<!-- <script language = "JavaScript" type = "text/javascript" charset = "utf-8" src = "//ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script> -->
+	<script language = "JavaScript" type = "text/javascript" charset = "utf-8" src = "./ui/jquery-ui-1.10.3.custom/js/jquery-ui-1.10.3.custom.min.js"></script>
+	<!-- <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script> -->
+	<!-- <link rel = "stylesheet" type = "text/css" media = "screen" href = "./ui/jquery-ui-1.10.3.custom/css/smoothness/jquery-ui-1.10.3.custom.min.css"> -->
+	
+	<script language = "JavaScript" type = "text/javascript" charset = "utf-8" src = "./ui/scripts/loader.js"></script>
+
+	<!-- libs -->
+	<script language = "JavaScript" type = "text/javascript" charset = "utf-8" src = "./ui/scripts/angular.1.1.5.min.js"></script>
+	<!-- <script language = "JavaScript" type = "text/javascript" charset = "utf-8" src = "//ajax.googleapis.com/ajax/libs/angularjs/1.1.5/angular.min.js"></script> -->
+	<script language = "JavaScript" type = "text/javascript" charset = "utf-8" src = "./ui/scripts/beautify.js"></script>
+	<script language = "JavaScript" type = "text/javascript" charset = "utf-8" src = "./ui/scripts/bootstrap.2.3.2.min.js"></script>
+	
+	<link rel = "stylesheet" type = "text/css" href = "./ui/css/bootstrap.2.3.2.min.css">
+
+	<!-- editor -->
+	<script language = "JavaScript" type = "text/javascript" charset = "utf-8" src = "./ui/CLEditor1.4.3/jquery.cleditor.js"></script>
+	<link rel = "stylesheet" type = "text/css" media = "screen" href = "./ui/CLEditor1.4.3/jquery.cleditor.css">
+
+	<!-- tree -->
+	<script language = "JavaScript" type = "text/javascript" charset = "utf-8" src = "./ui/tree/tree.js"></script>
+	<link rel = "stylesheet" type = "text/css" media = "screen" href = "./ui/tree/tree.css">
+
+	<!-- app -->
+	<link rel = "stylesheet" type = "text/css" media = "screen" href = "./ui/style.css">
+	<script language = "JavaScript" type = "text/javascript" charset = "utf-8" src = "./app.js"></script>
+
+	
+<body ng-controller = "BodyCtrl" id = "body">
+
+	<div class = "navbar navbar-fixed-top">
+		<div class = "navbar-inner">
+			<div class = "container">
+				<a href = "#!/main" ng-click = "mainTab()"><b class = "brand">{{i18n.brand}}</b></a>
+				<ul class = "nav" id = "mainTabs">
+					<li ng-class = "activeTab()"><a href = "#!/notes">{{i18n.tabs.notes}}</a></li>
+					<li ng-class = "activeTab()"><a href = "#!/settings">{{i18n.tabs.settings}}</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+	<div id = "container" class = "" ng-view> application run failure </div>
+
+	<div id = "info" class = "well hide"> debug info </div>
+	
+</body>
+</html>

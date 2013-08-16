@@ -1,0 +1,11 @@
+{
+	"use_growl": true,
+	"use_static": true,
+	"static_path": "static",
+	"perm_folder": "0755",
+	"perm_files": "0644",
+	"fileNameEncoding": "UTF-8",
+	"microtimeEcho": true,
+	"pages": [],
+	"pages_path": "pages"
+}
